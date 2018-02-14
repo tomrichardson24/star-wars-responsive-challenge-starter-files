@@ -14,8 +14,7 @@
  *   so 960 + 20 + 20 => 1000px
  *
  **/
-.row, header h1,
-header p {
+.row {
   max-width: 1000px;
   padding-left: 20px;
   padding-right: 20px;
@@ -33,7 +32,7 @@ header p {
   clear: both;
 }
 
-.col-4, {
+.col-3, .col-4, .col-6, .col-12 {
   float: left;
 
   /* Gutters:
@@ -47,22 +46,30 @@ header p {
 }
 
 /* Mobile defaults */
-.col-4, {
+.col-3, .col-4, .col-6, .col-12 {
   width: 100%;
 }
 
 
 /* Non-mobile, grid */
 @media only screen and (min-width: 640px) {
-
-  /* 4 columns */
-  .col-4 {
-    width: 33.3333%;
-    float: left;
-    padding-left: 1.04166666%;
-    padding-right: 1.04166666%;
+  /* 3 columns, 3/12 in % */
+  .col-3 {
+    width: 25%;
   }
 
-  
-  
+  /* 4 columns, 4/12 in % */
+  .col-4 {
+    width: 33.333333%;
+  }
 
+  /* 6 columns, 6/12 in % */
+  .col-6 {
+    width: 50%;
+  }
+
+  /* 12 columns, 12/12 in % */
+  .col-12 {
+    width: 100%;
+  }
+}
